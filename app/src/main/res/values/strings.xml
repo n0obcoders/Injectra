@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Injectra</string>
+    <string name="url_hint">Search or type a URL</string>
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <string name="reload">Reload</string>
+    <string name="home">Home</string>
+    <string name="menu">Menu</string>
+    <string name="new_tab">New tab</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="find_hint">Find in page</string>
+    <string name="find_prev">Previous match</string>
+    <string name="find_next">Next match</string>
+    <string name="close">Close</string>
+    <string name="private_hint">Private: search or type a URL</string>
+    <string name="about_tagline">A developer\'s browser</string>
+    <string name="about_dev_line">Developed by Nitin Shukla</string>
+    <string name="about_portfolio">https://n0obcoders.github.io/portfoli0/</string>
+</resources>

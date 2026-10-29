@@ -1,0 +1,12 @@
+<resources>
+    <color name="toolbar">#202124</color>
+    <color name="toolbar_dark">#17181a</color>
+    <color name="accent">#8ab4f8</color>
+    <color name="text">#e8eaed</color>
+    <color name="text_dim">#9aa0a6</color>
+    <color name="tab_active">#35363a</color>
+    <color name="tab_inactive">#292a2d</color>
+    <color name="white">#ffffff</color>
+    <color name="private_bar">#2a1a3e</color>
+    <color name="private_dark">#1b1028</color>
+</resources>

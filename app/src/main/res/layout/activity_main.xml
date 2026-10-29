@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/toolbar">
+
+    <!-- Tab strip -->
+    <LinearLayout
+        android:id="@+id/tabStrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/toolbar_dark"
+        android:gravity="center_vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/tabScroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/tabBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp" />
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/btnNewTab"
+            style="@style/ToolIcon"
+            android:src="@drawable/ic_add"
+            android:contentDescription="@string/new_tab" />
+    </LinearLayout>
+
+    <!-- Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="2dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/NavIcon"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back" />
+
+        <ImageButton
+            android:id="@+id/btnForward"
+            style="@style/NavIcon"
+            android:src="@drawable/ic_forward"
+            android:contentDescription="@string/forward" />
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            style="@style/NavIcon"
+            android:src="@drawable/ic_home"
+            android:contentDescription="@string/home" />
+
+        <AutoCompleteTextView
+            android:id="@+id/urlBar"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/bg_url"
+            android:hint="@string/url_hint"
+            android:textColorHint="@color/text_dim"
+            android:textColor="@color/text"
+            android:paddingHorizontal="14dp"
+            android:singleLine="true"
+            android:selectAllOnFocus="true"
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:textSize="14sp"
+            android:completionThreshold="1"
+            android:dropDownHeight="wrap_content"
+            android:popupBackground="@color/toolbar_dark"
+            android:importantForAutofill="no" />
+
+        <ImageButton
+            android:id="@+id/btnReload"
+            style="@style/ToolIcon"
+            android:src="@drawable/ic_refresh"
+            android:contentDescription="@string/reload" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            style="@style/ToolIcon"
+            android:src="@drawable/ic_more"
+            android:contentDescription="@string/menu" />
+    </LinearLayout>
+
+    <!-- Find in page bar (hidden until used) -->
+    <LinearLayout
+        android:id="@+id/findBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/toolbar_dark"
+        android:padding="4dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/findInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_url"
+            android:hint="@string/find_hint"
+            android:textColorHint="@color/text_dim"
+            android:textColor="@color/text"
+            android:paddingHorizontal="14dp"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textSize="14sp"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:id="@+id/findCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:gravity="center"
+            android:text="0/0"
+            android:textColor="@color/text_dim"
+            android:textSize="13sp" />
+
+        <ImageButton android:id="@+id/findPrev" style="@style/ToolIcon" android:src="@drawable/ic_up" android:contentDescription="@string/find_prev" />
+        <ImageButton android:id="@+id/findNext" style="@style/ToolIcon" android:src="@drawable/ic_down" android:contentDescription="@string/find_next" />
+        <ImageButton android:id="@+id/findClose" style="@style/ToolIcon" android:src="@drawable/ic_close" android:contentDescription="@string/close" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="@color/accent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/webContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+</LinearLayout>

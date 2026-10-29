@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Injectra" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/toolbar_dark</item>
+        <item name="android:navigationBarColor">@color/toolbar_dark</item>
+        <item name="android:windowBackground">@color/toolbar</item>
+    </style>
+
+    <style name="ToolIcon">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!-- Slightly narrower icon for the back/forward nav cluster so the toolbar fits a url bar. -->
+    <style name="NavIcon" parent="ToolIcon">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:padding">9dp</item>
+    </style>
+</resources>

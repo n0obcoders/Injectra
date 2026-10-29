@@ -1,0 +1,18 @@
+def central = 'https://repo.maven.apache.org/maven2'
+def mirror  = 'https://maven-central.storage-download.googleapis.com/maven2'
+def redirect = { repos ->
+    repos.all { repo ->
+        if (repo instanceof MavenArtifactRepository && repo.url != null &&
+            repo.url.toString().startsWith(central)) {
+            repo.url = uri(mirror)
+        }
+    }
+}
+settingsEvaluated { settings ->
+    redirect(settings.pluginManagement.repositories)
+    try { redirect(settings.dependencyResolutionManagement.repositories) } catch (e) {}
+}
+allprojects {
+    buildscript { redirect(repositories) }
+    redirect(repositories)
+}
